@@ -12,7 +12,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
         signInBTN.setOnClickListener(View.OnClickListener {
             var user = userNameET.text.toString()
             var pass = passwordET.text.toString()
@@ -22,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
                 intent.putExtra("NAME", user)
                 startActivity(intent)
             }else{
-                Toast.makeText(this,"Invalid",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Enter Valid Input",Toast.LENGTH_LONG).show()
             }
         })
 
